@@ -1,6 +1,9 @@
 from flask import Flask
+from flask.templating import render_template
 
 #1 we made flask application
+# a web server
+#that writes html
 
 app = Flask(__name__)
 
@@ -12,7 +15,7 @@ app = Flask(__name__)
 #we registered our flask application
 @app.route("/")
 def hello_world():
-  return f"hello world"
+  return render_template('home.html')
 
 
 print(__name__)
